@@ -1,13 +1,4 @@
 """
-Intro to Python Project 1, Task 0
-
-Complete each task in the file for that task. Submit the whole folder
-as a zip file or GitHub repo. 
-Full submission instructions are available on the Project Preparation page.
-"""
-
-
-"""
 Read file into texts and calls. 
 It's ok if you don't understand how to read files
 You will learn more about reading files in future lesson
@@ -21,12 +12,10 @@ with open('calls.csv', 'r') as f:
     reader = csv.reader(f)
     calls = list(reader)
 
+# print the first text and the final call.
+first_texts = texts[0]
+final_calls = calls[-1]
 
-"""
-TASK 0: 
-what is the first record of texts and what is the last record of calls
-Print messages: 
-"First record of texts, <incoming number> texts <answering number> at time <time>"
-"Last record of calls, <incoming number> calls <answering number> at time <time>, lasting <during> seconds"
-"""
 
+print("First record of texts, {} texts {} at time {} ".format(first_texts[-3],first_texts[-2],first_texts[-1]))
+print("Last record of calls, {} calls {} at time {} ,lasting {} seconds ".format(final_calls[-4],final_calls[-3],final_calls[-2],final_calls[-1]))

@@ -1,12 +1,4 @@
 """
-Intro to Python Lab 1, Task 2
-
-Complete each task in the file for that task. Submit the whole folder
-as a zip file or GitHub repo. 
-Full submission instructions are available on the Lab Preparation page.
-"""
-
-"""
 Read file into texts and calls. 
 It's ok if you don't understand how to read files
 You will learn more about reading files in future lesson
@@ -19,6 +11,33 @@ with open('texts.csv', 'r') as f:
 with open('calls.csv', 'r') as f:
     reader = csv.reader(f)
     calls = list(reader)
+
+#step1:create a function which build a dictionary includes phone and call duration.
+call_time = {}
+max_duration = 0
+
+def check_call_time(phone,call_duration):
+	"""
+	iterable the phone and call duration from dictionary.
+	"""
+
+	if phone in call_time:
+		call_time[phone] += int(call_duration)
+	else:
+		call_time[phone] = int(call_duration)
+
+#step2:use above function and iterable the original calls list.
+for call in calls:
+	check_call_time(call[0],call[3])
+	check_call_time(call[1],call[3])
+
+#step3:output the result as max phone# and max time duration.
+for phone in call_time:
+	if call_time[phone] > max_duration:
+		max_duration = call_time[phone]
+		max_call = phone
+
+print("{} spent the longest time,{} seconds,on the phone during September 2016.".format(max_call,max_duration))
 
 """
 TASK 2: Which telephone number spent the longest time on the phone
@@ -35,4 +54,6 @@ dictionary. If the key is already in the dictionary, add the value to
 the key's existing value. If the key does not already appear in the
 dictionary, add it and set its value to be the given value.
 """
+
+
 
