@@ -47,10 +47,10 @@ for i in final_Bangalore:
 	    print(i)
 
 #part2
-#input the percentage for 080.
+#input the percentage for "(080)".
 eight_Bangalore =[]
 for phone in from_Bangalore:
-	if phone[0:3].startswith("(080)"):
+	if phone[0:5] =="(080)":
 		eight_Bangalore.append("(080)")
 
 print("{} percent of calls from fixed lines in Bangalore are calls to other fixed lines in Bangalore.".format(len(eight_Bangalore)/len(final_Bangalore)))
