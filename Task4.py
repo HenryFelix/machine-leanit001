@@ -34,17 +34,13 @@ for text in texts:#add telephone# which send and receive texts
 	if text[1] not in calls_no_repeat_2:
 		calls_no_repeat_2.append(text[1])
 
-#step2:find the 
+#step2:find the exclused telephone#
 telemarketers = list(set(calls_no_repeat_1).difference(set(calls_no_repeat_2)))
 telemarketers.sort()
 
 print("These numbers could be telemarketers:")
 for i in telemarketers:
 	print('\n'+i)
-
-
-
-
 
 
 """
