@@ -21,7 +21,6 @@ for i in range(len(calls)):
 	if calls[i][0].startswith("(080)"):
 		from_Bangalore.append(calls[i][1])
 
-#参考https://github.com/dontlaike/work_uda/blob/a35dc313099e700873ea36d0d9f50654e5dc4f1d/Task3.py
 #step2:choose the phone# which has three characteries.
 final_Bangalore= []
 for phone in from_Bangalore:

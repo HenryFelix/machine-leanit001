@@ -31,7 +31,7 @@ for call in calls:
 	check_call_time(call[0],call[3])
 	check_call_time(call[1],call[3])
 
-#step3:output the result as max phone# and max time duration.
+#step3:output the result as max phone# and max time duration.递归自身
 for phone in call_time:
 	if call_time[phone] > max_duration:
 		max_duration = call_time[phone]
