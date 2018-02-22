@@ -13,7 +13,7 @@ with open('calls.csv', 'r') as f:
     reader = csv.reader(f)
     calls = list(reader)
 
-参考#https://github.com/dontlaike/work_uda/blob/a35dc313099e700873ea36d0d9f50654e5dc4f1d/Task4.py
+# 参考https://github.com/dontlaike/work_uda/blob/a35dc313099e700873ea36d0d9f50654e5dc4f1d/Task4.py
 
 #step1:find no-repeated call when make and receive.
 """

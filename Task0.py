@@ -17,5 +17,14 @@ first_texts = texts[0]
 final_calls = calls[-1]
 
 
-print("First record of texts, {} texts {} at time {} ".format(first_texts[-3],first_texts[-2],first_texts[-1]))
-print("Last record of calls, {} calls {} at time {} ,lasting {} seconds ".format(final_calls[-4],final_calls[-3],final_calls[-2],final_calls[-1]))
+print("First record of texts, {} texts {} at time {} ".format(
+	first_texts[-3],
+	first_texts[-2],
+	first_texts[-1]
+	))
+print("Last record of calls, {} calls {} at time {},lasting {} seconds ".format(
+	final_calls[-4],
+	final_calls[-3],
+	final_calls[-2],
+	final_calls[-1]
+	))

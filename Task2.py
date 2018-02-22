@@ -14,13 +14,11 @@ with open('calls.csv', 'r') as f:
 
 #step1:create a function which build a dictionary includes phone and call duration.
 call_time = {}
-max_duration = 0
 
 def check_call_time(phone,call_duration):
 	"""
 	iterable the phone and call duration from dictionary.
 	"""
-
 	if phone in call_time:
 		call_time[phone] += int(call_duration)
 	else:
@@ -31,13 +29,11 @@ for call in calls:
 	check_call_time(call[0],call[3])
 	check_call_time(call[1],call[3])
 
-#step3:output the result as max phone# and max time duration.递归自身
-for phone in call_time:
-	if call_time[phone] > max_duration:
-		max_duration = call_time[phone]
-		max_call = phone
+#step3:output the result as max phone# and max time duration with the function of "MAX"
 
-print("{} spent the longest time,{} seconds,on the phone during September 2016.".format(max_call,max_duration))
+longest_call = max(call_time,key=call_time.get)
+
+print("{} spent the longest time,{} seconds,on the phone during September 2016.".format(longest_call,call_time[longest_call]))
 
 """
 TASK 2: Which telephone number spent the longest time on the phone

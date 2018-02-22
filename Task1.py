@@ -31,7 +31,9 @@ for call in calls:
 	if call[1] not in telnumber_call:
 		telnumber_call.append(call[1])
 
-print("there are {} different telephone numbers in the records.".format(len(telnumber_text)+len(telnumber_call)))
+total_numbers = list(set(telnumber_call+ telnumber_text)) # make set to delete duplicate numbers.
+
+print("there are {} different telephone numbers in the records.".format(len(total_numbers)))
 
 """
 TASK 1: 

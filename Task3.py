@@ -26,7 +26,7 @@ final_Bangalore= []
 for phone in from_Bangalore:
 	"""fixed telephone
 	"""
-	if phone[1] =='0' and phone.find('(') and phone.find(')'):
+	if phone[1] =='0' and phone.find('(') > -1 and phone.find(')') > -1:
 		call_f =phone[0:phone.find(')')]
 		if call_f not in final_Bangalore:
 			final_Bangalore.append(call_f)
