@@ -26,8 +26,8 @@ final_Bangalore= []
 for phone in from_Bangalore:
 	"""fixed telephone
 	"""
-	if phone[1] =='0' and phone.find('(') > -1 and phone.find(')') > -1:
-		call_f =phone[0:phone.find(')')]
+	if phone[1] =='0' and phone.find('(') > -1 and phone.find(')') >-1 :
+		call_f =phone[0:phone.find(')') +1]
 		if call_f not in final_Bangalore:
 			final_Bangalore.append(call_f)
 	"""mobile telephone
@@ -47,12 +47,13 @@ for i in final_Bangalore:
 
 #part2
 #input the percentage for "(080)".
-eight_Bangalore =[]
+output_Bangalore =[]
 for phone in from_Bangalore:
 	if phone[0:5] =="(080)":
-		eight_Bangalore.append("(080)")
+		output_Bangalore.append("(080)")
 
-print("{} percent of calls from fixed lines in Bangalore are calls to other fixed lines in Bangalore.".format(len(eight_Bangalore)/len(final_Bangalore)))
+print("{:.2%} percent of calls from fixed lines in Bangalore are calls to other fixed lines in Bangalore.".
+	format(len(output_Bangalore)/len(final_Bangalore)))
 
 """
 TASK 3:
