@@ -53,7 +53,8 @@ for phone in from_Bangalore:
 		output_Bangalore.append("(080)")
 
 print("{:.2%} percent of calls from fixed lines in Bangalore are calls to other fixed lines in Bangalore.".
-	format(len(output_Bangalore)/len(final_Bangalore)))
+	format(len(output_Bangalore)/len(from_Bangalore)))
+
 
 """
 TASK 3:
