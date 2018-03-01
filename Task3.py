@@ -52,8 +52,9 @@ for phone in from_Bangalore:
 	if phone[0:5] =="(080)":
 		output_Bangalore.append("(080)")
 
-print("{:.2%} percent of calls from fixed lines in Bangalore are calls to other fixed lines in Bangalore.".
+print("{:.2%} of calls from fixed lines in Bangalore are calls to other fixed lines in Bangalore.".
 	format(len(output_Bangalore)/len(from_Bangalore)))
+
 
 
 """
@@ -87,3 +88,4 @@ Print the answer as a part of a message::
 to other fixed lines in Bangalore."
 The percentage should have 2 decimal digits
 """
+
